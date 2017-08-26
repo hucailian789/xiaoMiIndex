@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小米首页</title>
+    <link rel="icon favicon" type="text/css" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="sass/base.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="sass/index.css">
+    <script  src="js/jquery-1.4.4.min.js"></script>
+    <script  src="js/template.js"></script>
+    <script  src="js/index.js"></script>
+</head>
+<body>
+    <!-- 顶部通栏 -->
+    <header>
+        <div class="topBar w">
+            <div class="topBarL">
+                <ul>
+                    <li><a href="#">小米商城</a><span>|</span></li>
+                    <li><a href="#">MIUI</a><span>|</span></li>
+                    <li><a href="#">米聊</a><span>|</span></li>
+                    <li><a href="#">游戏</a><span>|</span></li>
+                    <li><a href="#">多看阅读</a><span>|</span></li>
+                    <li><a href="#">云服务</a><span>|</span></li>
+                    <li><a href="#">小米网移动版</a><span>|</span></li>
+                    <li><a href="#">问题反馈</a><span>|</span></li>
+                    <li><a href="#">Select Region</a></li>
+                </ul>
+            </div>
+            <div class="topBarR">
+                <div class="login">
+                    <a href="#">登陆</a>
+                    <span>|</span>
+                    <a href="#">注册</a>
+                </div>
+                <a href="#" class="shopCar">
+                    <i class="iconfont icon-gouwuche"></i> 购物车(<span>0</span>)
+                    <div class="shopCarList">购物车中还没有商品，赶快选购吧！</div>
+                </a>
+                
+            </div>
+        </div>
+    </header>
+    <div class="mainNav w clearfix">
+        <div class="logo">
+            <a href="mi.com"><h1>小米首页</h1></a>
+            <a href="" class="gif"></a></div>
+        <ul class="zhNav clearfix">
+            <script id="tempMain" type="text/html">           
+            {{each backData}}
+            <li data-type="{{$value.type}}">
+                <a href="{{$value.sourceUrl}}">{{$value.name}}</a>
+            </li>    
+            {{/each}} 
+            </script>         
+        </ul>
+        <div class="searchBox">
+            <input type="text">
+            <div class="hotGoods"><a href="#">红米pro</a><a href="#">小米笔记本air</a></div>
+            <label for=""><i class="font iconfont">&#xe60b;</i></label>
+            <div class="searchList">
+                <ul class="search-result clearfix"> 
+                    <li>
+                        <span class="item-name">小米手机5</span>
+                        <span class="item-num" >约有11件</span>
+                    </li>
+                    <li>
+                        <span class="item-name">空气净化器2</span>
+                        <span class="item-num" >约有1件</span>
+                    </li>
+                    <li>
+                         <span class="item-name">活塞耳机</span>
+                         <span class="item-num" >约有4件</span>
+                    </li>
+                    <li> 
+                        <span class="item-name">小米路由器</span>
+                        <span class="item-num">约有8件</span> 
+                    </li>
+                    <li>
+                        <span class="item-name">移动电源</span>
+                        <span class="item-num">约有21件</span>
+                    </li>
+                    <li> 
+                        <span class="item-name">运动相机</span> 
+                        <span class="item-num">约有3件</span> 
+                    </li>
+                    <li>
+                        <span class="item-name">小米摄像</span> 
+                        <span class="item-num">约有2</span> 
+                    </li>
+                    <li> 
+                        <spanclass="item-name" >小米体重秤</span>
+                        <span class="item-num" >约有1件</span>
+                    </li>
+                    <li> 
+                        <span class="item-name">小米插线板</span>
+                        <span class="item-num">约有13件</span>
+                    </li>
+                    <li>
+                        <span class="item-name">配件优惠套</span>
+                         <span class="item-num" >约有32</span> 
+                    </li> 
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mainNavList">
+        <div class="w">
+            <ul class="clearfix">
+                <script  type="text/html" id="tempmainNavList">
+                {{each backData}}                
+                <li>
+                    <a href="{{$value.sourcePath}}">
+                        <img src="{{$value.imgUrl}}" alt="">
+                        <h3>{{$value.name}}</h3>
+                        <p>{{$value.price}}</p>
+                    </a>                    
+                </li>                
+                {{/each}}
+                </script>                
+            </ul>
+        </div>
+    </div>
+
+    <!--呼吸轮播图 -->
+    <div class="bannerWrap w">
+        <ul class="banner">
+            <script  type="text/html" id="tempBanner">
+            {{each backData}}
+            <li><a href="{{$value.sourceUrl}}"><img src="{{$value.imgUrl}}" alt=""></a></li>
+            {{/each}}
+            </script>            
+        </ul>
+        <div class="pre">&lt;</div>
+        <div class="next">&gt;</div>
+    <!-- 轮播侧边导航栏     -->
+        <div class="menu">
+            <ul class="menuItems">
+               <script type="text/html" id="tempMenu">
+               {{each backData}}
+               <li data-type="{{$value.type}}">{{$value.content}}<span>&gt;</span></li>
+               {{/each}}
+               </script>         
+            </ul>            
+        </div>
+        <div class="menuDetal clearfix">
+           <!-- js动态生成 -->
+        </div>
+    </div>       
+
+
+
+
+    <!-- 底部区域 -->
+    <footer>
+        <div class="footer w">
+            <div class="footerService">
+                <ul class="clearfix">
+                    <li><a href=""><span class="icon iconfont">&#xf0086;</span> 1小时快修服务</a></li>
+                    <li><a href=""><span class="icon iconfont">&#xe638;</span> 7天无条件退货</a></li>
+                    <li><a href=""><span class="icon iconfont">&#xe638;</span> 15天免费换货</a></li>
+                    <li><a href=""><span class="icon iconfont">&#xe657;</span> 满150元包邮</a></li>
+                    <li><a href=""><span class="icon iconfont">&#xe64b;</span> 520余家售后网点</a></li>
+                </ul>
+            </div>
+            <div class="footerInfo clearfix">
+                <div class="infoLeft">
+                    <dl>
+                        <dt>帮助中心</dt>
+                        <dd><a href="">账户管理</a></dd>
+                        <dd><a href="">购物指南</a></dd>
+                        <dd><a href="">订单操作</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>服务支持</dt>
+                        <dd><a href="">售后政策</a></dd>
+                        <dd><a href="">自助服务</a></dd>
+                        <dd><a href="">相关下载</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>线下门店</dt>
+                        <dd><a href="">小米之家</a></dd>
+                        <dd><a href="">服务网点</a></dd>
+                        <dd><a href="">零售网点</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>关于小米</dt>
+                        <dd><a href="">了解小米</a></dd>
+                        <dd><a href="">加入小米</a></dd>
+                        <dd><a href="">联系我们</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>关注我们</dt>
+                        <dd><a href="">新浪微博</a></dd>
+                        <dd><a href="">小米部落</a></dd>
+                        <dd><a href="">官方微信</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>特色服务</dt>
+                        <dd><a href="">F码通道</a></dd>
+                        <dd><a href="">小米移动</a></dd>
+                        <dd><a href="">防伪查询</a></dd>
+                    </dl>
+                </div>
+                <div class="infoRight">
+                    <h3>400-100-5678</h3>
+                    <p>周一至周日 8:00-18:00 <br>（仅收市话费）</p>
+                    <a href="javacript:;">24小时在线客服</a>
+                </div>
+            </div>
+            <div class="friendLink">
+                <div class="friends clearfix">
+                    <img src="images/logo.png" alt="" class="sublogo">
+                    <div class="links">
+                        <div class="linksTop">
+                            <ul>
+                                <li><a href="#">小米商城<span>|</span></a></li>
+                                <li><a href="#">MIUI<span>|</span></a></li>
+                                <li><a href="#">米聊<span>|</span></a></li>
+                                <li><a href="#">多看书城<span>|</span></a></li>
+                                <li><a href="#">小米路由器<span>|</span></a></li>
+                                <li><a href="#">视频电话<span>|</span></a></li>
+                                <li><a href="#">小米后院<span>|</span></a></li>
+                                <li><a href="#">小米天猫店<span>|</span></a></li>
+                                <li><a href="#">小米淘宝直营店<span>|</span></a></li>
+                                <li><a href="#">小米网盟<span>|</span></a></li>
+                                <li><a href="#">问题反馈<span>|</span></a></li>
+                                <li><a href="#">Select Region<span></span></a></li>
+                            </ul>
+                        </div>
+                        <p class="beian">©<a href="mi.com">mi.com</a> 京ICP证110507号 京ICP备10046444号 <a href="#">京公网安备11010802020134号</a> <a href="#">京网文[2014]0059-0009号</a></p>
+                        <p class="cn">违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+                    </div>
+                    <div class="imgR">
+                        <img src="images/v-logo-1.png" alt="">
+                        <img src="images/v-logo-2.png" alt="">
+                        <img src="images/v-logo-3.png" alt="">
+                    </div>
+                </div>
+                <p class="slogon"> 探索黑科技，小米为发烧而生 </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

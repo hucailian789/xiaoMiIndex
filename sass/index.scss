@@ -1,0 +1,486 @@
+header{
+    background-color: #333;
+    height: 40px;
+    .topBar{
+        .topBarL{
+            float: left;
+            >ul{
+                >li{
+                    float: left;
+                    height: 40px;
+                    line-height: 40px;                  
+                   a{
+                    color: #ccc; 
+                    &:hover{
+                      color: #fff;
+                    }                      
+                   }
+                   span{                   
+                     margin: 0 5px;
+                     color: #b0b0b0;
+                     &:hover{
+                      color: #fff;
+                      }    
+                    }
+                }
+            }
+        }
+        .topBarR{
+            float: right;
+            .login{
+                float: left;
+                height: 40px;
+                line-height: 40px;
+                a{
+                  color: #ccc;
+                  &:hover{
+                    color: #fff;
+                  }   
+                }               
+                span{                  
+                  margin: 0 5px;
+                  color: #b0b0b0;
+                }               
+            }
+            .shopCar{
+                position: relative;
+                float: left;
+                margin-left: 20px;
+                background-color: rgba(255,255,255,.5);
+                width: 80px;
+                height: 40px;
+                line-height: 40px;
+                padding:  0 30px; 
+                &:hover{
+                    background-color: #fff;
+                    .shopCarList{
+                        display: block;  
+                    }
+                }
+                i{
+                    font-size: 18px;
+                } 
+                .shopCarList{
+                    position: absolute;
+                    width: 316px;
+                    display: none;
+                    line-height: 96px;
+                    top: 40px;
+                    right: 0;                    
+                    text-align: center;
+                    color: #ccc;      
+                    box-shadow: 0 0px 8px #ccc;
+                    transition: all .3s ;
+                }
+            }
+        }
+    }
+}
+
+.mainNav{
+    padding: 20px;
+    .logo{
+        a:first-child{
+            float: left;                        
+            h1{
+                background: url('../images/logo.png');
+                width: 55px;
+                height: 55px;
+                font-size: 0;
+                text-indent: -100000px;
+            }
+        }
+        a:last-child{
+            float: left;
+            margin-left: 10px;
+            margin-top: -6px;
+            width: 163px;
+            height: 66px;
+            background: url('../images/win.gif');
+        }
+    }
+    .zhNav{
+        float: left;
+        li{
+            float: left;
+            height: 60px;
+            line-height: 60px;
+            padding:0 10px;
+            >a{
+                font-size: 16px;
+            }
+        }
+    }
+    .searchBox{
+        float: right;
+        position: relative;
+        width: 295px;
+        height: 50px;
+        border: 1px solid #ccc;
+        &.active{
+            border: 1px solid #ff6700;
+            label{
+               border-left: 1px solid #ff6700; 
+            }
+            .hotGoods{
+                display: none;
+            }
+            .searchList{
+                display: block;
+                z-index: 99;
+                background-color: #fff;
+            }          
+        }
+        input{
+            float: left;
+            width: 230px;
+            height: 50px;
+            padding-left: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+        .hotGoods{
+            position: absolute;
+            width: 145px;
+            height: 18px;
+            line-height: 18px;
+            top: 16px;
+            right: 65px;
+           a{
+              background-color: #ccc;
+              margin-left: 5px;             
+              &:hover {
+                    background-color: #ff6700;
+                    color: #fff;
+                }
+           }
+        }
+        label{
+            float: left;           
+            width: 54px;
+            height: 50px;
+            line-height: 42px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            border-left: 1px solid #ccc;
+            &:hover{
+                background-color: #ff6700;
+                color: #fff;
+            }
+        }
+        .searchList{
+            position: absolute;
+            width: 240px;
+            border:1px solid #ff6700;             
+            margin-left: -1px;
+            top: 50px;
+            left: 0;
+            display: none;
+            ul{
+                li{
+                    padding: 0 10px;
+                    height: 30px;                    
+                    line-height: 30px;
+                    &:hover{
+                        background-color: #f0f0f0;
+                    }
+                    span{
+                        color: #333;
+                        float: left;
+                        &:last-child{
+                            color: #bbb;
+                            float: right;
+                        }
+                    }       
+                }
+            }
+        }
+    }
+}
+
+.mainNavList{
+    position: absolute;
+    top: 140px;
+    width: 100%;
+    height:230px;
+    overflow: hidden;   
+    border-top: 1px solid #ccc;
+    box-shadow: 0 2px 6px #ccc;
+    display: none;
+    z-index: 999;
+    background-color: #fff;
+    ul{
+        li{
+            float: left;
+            width: 180px;            
+            text-align: center;            
+            &:last-child{
+               img{
+                   border-right:0;
+               }         
+            }            
+            img{
+                width: 160px;
+                height: 110px;
+                margin: 35px 15px 0;
+                border-right:1px solid #ccc;
+            }
+            h3,p{
+                height: 24px;
+                line-height: 24px;
+                font-size: 14px;
+                margin-top: 10px;
+            }
+            p{
+                color: #ff6700;                
+            }
+            
+        }
+    }
+}
+
+// 呼吸轮播图
+.bannerWrap{
+    position: relative;
+    height: 460px;
+    .banner{
+        li{
+            position: absolute; 
+            left: 0;
+            top: 0;          
+            width: 100%;
+            height: 460px;
+        }
+    }        
+    .pre{
+        left: 234px;
+    }
+    .next, .pre{
+        position: absolute;
+        top: 50%;
+        width: 40px;
+        height: 70px;
+        margin-top: -35px;        
+        text-align: center;
+        color: #ccc;        
+        font: normal bold 30px/70px "consolas";
+        right: 0;
+        cursor: pointer;
+        &:hover {            
+            background-color: rgba(0, 0, 0, .3);
+            color: #fff;
+        }        
+    }
+    .menu{
+        padding: 20px 0;
+        position: absolute;
+        width: 234px;
+        padding: 20px 0;
+        background-color: rgba(0,0,0, .5);
+        z-index: 99;        
+        .menuItems{
+            li{
+                width: 184px;
+                height: 42px;
+                line-height: 42px;
+                font-size: 14px;
+                padding: 0 25px;
+                color: #fff;
+                cursor: pointer;                
+                span{
+                    float: right; 
+                    font: normal 600 18px/42px "consolas";
+                    color: #ccc;
+                }
+                &:hover {
+                    background-color: #ff6700;
+                }                                
+            }
+        }
+    }
+    .menuDetal{
+        position: absolute;
+        left: 234px;
+        height: 460px;
+        border-top: 1px solid #ccc;
+        box-shadow: 0 5px 8px #ccc;
+        z-index: 99;
+        background-color: #fff;
+        ul{
+          float: left;
+          height: 77px;           
+          li{
+              position: relative;
+              width: 235px;
+              height: 34px;
+              padding: 20px 0 20px 30px;
+              line-height: 34px;
+              a:first-child{                               
+                img{
+                    float: left;
+                    margin-right: 10px;
+                }
+                h4{
+                    float: left;
+                    width: 120px; 
+                    font-size: 14px;                   
+                }
+              }
+              a:last-child{                  
+                  position: absolute;
+                  width: 60px;
+                  height: 24px;
+                  line-height: 24px;
+                  top: 25px;
+                  right: 5px;
+                  border: 1px solid #ff6700;
+                  font-size: 14px;
+                  text-align: center;
+                  color: #ff6700;
+                  &.buyStatus{
+                      display: none;
+                  }
+                  &:hover{
+                      background-color: #ff6700;
+                      color: #fff;
+                  }
+              }  
+          } 
+        }
+    }
+}
+
+
+
+// 底部区域
+.footer {
+    background-color: #fff;
+    .footerService {
+        padding: 27px 0;
+        border-bottom: 1px solid #e0e0e0;
+        ul {
+            li {
+                float: left;
+                width: 245px;
+                height: 27px;
+                line-height: 27px;
+                font-size: 16px;
+                color: #616161;
+                padding: 0 40px;
+                box-sizing: border-box;
+                border-right: 1px solid #e0e0e0;
+                font-size: 17px;
+                &:last-child {
+                    border: none;
+                }
+                a {
+                    color: #333;                    
+                    span {
+                        font-size: 22px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+    .footerInfo {
+        padding: 40px 0;
+    .infoLeft {
+        float: left;
+        dl {
+            float: left;
+            width: 160px;
+            dt {
+                height: 30px;
+                font-size: 14px;
+                line-height: 30px;
+            }
+            dd {
+                font-size: 12px;
+                line-height: 26px;
+                a {
+                    color: #333;
+                }
+            }
+        }
+        }
+        .infoRight {
+            float: right;
+            width: 180px;
+            padding: 0 30px;
+            border-left: 1px solid #ccc;
+            text-align: center;
+            h3 {
+                color: #ff6700;
+            }
+            p {
+                font-size: 12px;
+                color: #ccc;
+            }
+            a {
+                display: block;
+                width: 120px;
+                height: 30px;
+                margin: 5px auto;
+                border: 1px solid #ff6700;
+                line-height: 30px;
+                color: #ff6700;
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+    }
+    .friendLink {
+        padding: 30px 0;
+        .friends {
+        .sublogo {
+            float: left;
+        }
+        .links { 
+            float: left;
+            .linksTop {                    
+                margin-left: 10px;
+                height: 16px;
+                line-height: 14px;
+                padding-bottom: 8px;
+                font-size: 12px;
+                ul {
+                    li {
+                        float: left;
+                        span {
+                            margin: 0 4px;
+                        }
+                    }
+                }
+            }
+            p {
+                margin: 0 0 0 10px;
+                font-size: 12px;
+                color: #ccc;
+                a {
+                    color: #ccc;
+                    &:hover {
+                        color: #ff6700;
+                    }
+                }
+            }
+        }
+        .imgR {
+            float: right;
+            img {
+                float: left;
+                margin-left: 10px;
+            }
+        }
+        }
+        .slogon {
+        margin: 30px 0 40px;
+        text-align: center;
+        height: 28px;
+        font: 18px/28px "宋体";
+        color: #ddd;
+        }
+    }
+}
+
